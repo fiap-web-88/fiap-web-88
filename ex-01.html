@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta chartset="utf-8"/>
+        <title>Curso de HTML5, CSS3 e JavaScript</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <style type="text/css">
+/*normalizar o navegador*/
+        body{
+            margin:0;
+            padding:0;
+        }  
+        /*esse asterico é um seletor universal. seleciona todas as classes */
+        /* SE fosse seletor de class seria um ponto(.).
+         Sempre que possível deve ser preferencialmente usado */
+        /* Se for ID seletor é hashtag(#) */
+        /* SE for atributo é usado colchete([]) */
+        *{
+            box-sizing: border-box;
+        }  
+        /* Estrutura CSS */
+        /* Uma declaração CSS é composto por seletor{ propriedade:valor;} */
+        /* Box-sizing: delimita o tamanho da caixa de texto, composto por 4 lados*/
+        /* Box-model uma aplicação web é formada por vários box-model,
+         onde a estrutura de tags são aplicadas para dar forma a página. 
+         Ela tem 4 camadas: Margin, Border, Padding e Content*/
+        /*----------------------------------------------*/    
+    /*div é um seletor CSS, ele indica quem o coletor CSS está selecionado. É um seletor de tag  */
+            div.container {
+                width:100%;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            /* Quanto mais específico mais importante. No caso h1.titulo, ele tem uma tag e uma classe */
+            body>div>h1.titulo {
+                color: red;
+            }
+            h1.titulo,
+            h2.titulo{
+                color:antiquewhite !important;
+                text-align: center;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin: 0;
+                font-weight: 300;
+                font-family: 'Roboto', sans-serif;
+                color: #555;
+            }
+            h1 {
+                font-size: 4em;
+            }
+            h2 {
+                font-size: 2em;
+            }
+
+            body {
+                background: url("assets/images/background-mobile.webp") no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+            /* Daqui pra cima é tudo mobile */
+
+            /* tablet- mediaquerie para largura de tela começando em 768px* */
+            @media (min-width: 768px) {
+                /* tablet */
+                body {
+                background: url("assets/images/background-tablet.webp") no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+            }
+
+            @media (min-width: 1280px) {
+                /* desktop */
+                body {
+                background: url("assets/images/background-desktop.webp") no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+            }
+
+            /* 2520-Extra Large- Imac 27 */
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="titulo">Seja bem vindo(a) ao curso de HTML5, CSS3 e JavaScript</h1>
+            <h2 class="titulo">No momento o assunto é <i>HTML5</i></h2>
+        </div>
+    </body>
+</html>
